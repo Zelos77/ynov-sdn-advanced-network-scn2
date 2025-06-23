@@ -1,7 +1,6 @@
-# ynov-sdn-advanced-network-scn2
-```Projet Réseaux Avancés – Infrastructure pfSense + OSPF + VPN
+#  Projet Réseaux Avancés – Infrastructure pfSense + OSPF + VPN
 
-Objectifs
+##  Objectif du projet
 
 Concevoir, déployer et superviser une **appliance réseau virtuelle sécurisée** dans un environnement cloud privé simulé, avec :
 
@@ -10,11 +9,12 @@ Concevoir, déployer et superviser une **appliance réseau virtuelle sécurisée
 - Règles de sécurité via **pfSense (firewall + NAT)**
 - Supervision réseau avec **Prometheus** et **Grafana**
 - Scripts d’automatisation (Bash) pour chaque rôle réseau
+
 ---
 
-Correspondance avec les objectifs pédagogiques
+##  Correspondance avec les objectifs pédagogiques
 
-| Exigence pédagogique         | Implémentation technique                   |
+| Exigence pédagogique         | Implémentation technique                                      |
 |------------------------------|---------------------------------------------------------------|
 | Routage dynamique (OSPF)     | FRRouting activé dans pfSense et/ou sur routeur Linux (site B) |
 | Tunnel VPN site-à-site       | WireGuard ou IPsec configuré entre Site A ↔ Site B           |
@@ -27,20 +27,20 @@ Correspondance avec les objectifs pédagogiques
 
 ---
 
-Infrastructure VM
+##  Infrastructure VM
 
-| VM        | Rôle                         | IP                  |
-|-----------|------------------------------|---------------------|
-| `pfsense` | NVA (Firewall + VPN + OSPF)  | 192.168.1.1 / WAN
-| `site-a`  | Client local (test, LAN)     | 192.168.10.2
-| `site-b`  | VPN peer (routeur FRR ou pfSense) | 192.168.20.1
-| `monitor` (optionnel) | Supervision     | 192.168.10.10
+| VM          | Rôle                            | IP                 |
+|-------------|----------------------------------|--------------------|
+| `pfsense`   | NVA (Firewall + VPN + OSPF)     | 192.168.1.1 / WAN  |
+| `site-a`    | Client local (test, LAN)        | 192.168.10.2       |
+| `site-b`    | VPN peer (routeur FRR ou pfSense) | 192.168.20.1     |
+| `monitor` *(optionnel)* | Supervision        | 192.168.10.10      |
 
 ---
-Déploiement rapide
 
-> S'assurer que les fichiers sont bien encodés en `LF` (pas CRLF)
+##  Déploiement rapide
+
+> S'assurer que les fichiers sont bien encodés en `LF` (et non CRLF)
 
 ```bash
 vagrant up
-```
