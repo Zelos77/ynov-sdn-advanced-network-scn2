@@ -41,6 +41,6 @@ Concevoir, déployer et superviser une **appliance réseau virtuelle sécurisée
 ##  Déploiement rapide
 
 > S'assurer que les fichiers sont bien encodés en `LF` (et non CRLF)
-
+Exécuter la commande sur le terminal sur le répertoire où le vagrantfile est situé, exemple : C:\Users\user\Downloads\ynov-sdn-advanced-network-scn2
 ```bash
 vagrant up
